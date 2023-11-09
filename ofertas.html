@@ -8,10 +8,7 @@
 
     <link rel="stylesheet" href="./estilos/estilo.css">
     <link rel="icon" href="./imgs/Logo.ico" type="image/x-icon">
-
-    <script language="JavaScript" src="./js.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-
+    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Diphylleia&family=Kalam&display=swap" rel="stylesheet">
@@ -31,46 +28,15 @@
         <a href="./index.html">Restaurante Genérico</a>
     </h1>
 
-
+    
 
     <!-- ---------- Barra Búsqueda ---------- -->
     <div class="input-container">
         <input type="text" name="text" class="input" placeholder="Buscar un plato...">
-        <span class="icon">
-            <svg width="19px" height="19px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-                <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
-                <g id="SVGRepo_iconCarrier">
-                    <path opacity="1" d="M14 5H20" stroke="#000" stroke-width="1.5" stroke-linecap="round"
-                        stroke-linejoin="round"></path>
-                    <path opacity="1" d="M14 8H17" stroke="#000" stroke-width="1.5" stroke-linecap="round"
-                        stroke-linejoin="round"></path>
-                    <path d="M21 11.5C21 16.75 16.75 21 11.5 21C6.25 21 2 16.75 2 11.5C2 6.25 6.25 2 11.5 2"
-                        stroke="#000" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"></path>
-                    <path opacity="1" d="M22 22L20 20" stroke="#000" stroke-width="3.5" stroke-linecap="round"
-                        stroke-linejoin="round"></path>
-                </g>
-            </svg>
+        <span class="icon"> 
+          <svg width="19px" height="19px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path opacity="1" d="M14 5H20" stroke="#000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path> <path opacity="1" d="M14 8H17" stroke="#000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path> <path d="M21 11.5C21 16.75 16.75 21 11.5 21C6.25 21 2 16.75 2 11.5C2 6.25 6.25 2 11.5 2" stroke="#000" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"></path> <path opacity="1" d="M22 22L20 20" stroke="#000" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
         </span>
     </div>
-
-
-    <audio class="audio" id="miAudio">
-        <source src="./musicafondo.mp3" type="audio/mpeg">
-        Tu navegador no soporta la reproducción de audio.
-      </audio>
-
-      <script>
-        // Obtén una referencia al elemento de audio
-        var miAudio = document.getElementById("miAudio");
-
-        // Intenta reproducir el audio inmediatamente después de cargarlo
-        miAudio.play()
-        .catch(function(error) {
-          // En caso de error, como la reproducción bloqueada por el navegador, muestra un mensaje o realiza una acción alternativa.
-          console.error("La reproducción automática no está permitida por el navegador.");
-        });
-      </script>
 
 
     <!-- ---------- Menu Desplegable ---------- -->
@@ -80,250 +46,15 @@
 
     <div class="wrapper">
         <h2>Más Información</h2>
-        <ul>
-            <li><a href="#">Alérgenos</a></li>
-            <li><a href="./instalaciones.html">Instalaciones</a></li>
-            <li><a href="#">Correspondencias</a></li>
-            <li><a href="#">Reconocimientos</a></li>
-        </ul>
+            <ul>
+        <li><a href="#">Alérgenos</a></li>
+        <li><a href="./instalaciones.html">Instalaciones</a></li>
+        <li><a href="#">Correspondencias</a></li>
+        <li><a href="#">Reconocimientos</a></li>
+            </ul>
     </div>
 
-    <!-- ---------- Carrousel ---------- -->
-    <div class="container">
-        <div class="slide-container">
-            <div class="slide" pos="1">
-                <div class="slide-1">
-                    <img src="./imgs/imgplato1.jpg" class="imagenescarrousel">
-                    <h1 class="titscarrousel">Filete Dorado del Mar</h1>
-                    <p>
-                        Pescado frito crujiente y dorado por fuera, tierno y jugoso por dentro.
-                        <br><br>
-                        Ingredientes: Pescado, harina, huevo, pan rallado, sal, pimienta, aceite para freír.
-                    </p>
-
-                    <br>
-
-            <div class="botonescarta">
-                    <ul class="shadow-button-set">
-                        <li><button><b>Añadir para reserva</b></button></li>
-                    </ul>
-
-                    <br>
-
-                    <ul class="shadow-button-set">
-                        <li><button><b>Pedir a Domicilio</b></button></li>
-                    </ul>
-            </div>
-                </div>
-            </div>
-
-            <div class="slide" pos="2">
-                <div class="slide-2">
-
-                    <img src="./imgs/imgplato2.jpg" class="imagenescarrousel">
-                    <h1 class="titscarrousel">Torta Real de Zanahoria</h1>
-                    <p>
-                        Pastel esponjoso y húmedo con un sabor dulce y agradable a zanahoria, cubierto con glaseado de queso crema.
-                        <br><br>
-                        Ingredientes: Zanahorias, harina, azúcar, huevos, aceite vegetal, canela, nueces (opcional), bicarbonato de sodio, polvo de hornear, sal, queso crema, mantequilla, azúcar glas.
-                    </p>
-
-                    <br>
-
-            <div class="botonescarta">
-                    <ul class="shadow-button-set">
-                        <li><button><b>Añadir para reserva</b></button></li>
-                    </ul>
-
-                    <br>
-
-                    <ul class="shadow-button-set">
-                        <li><button><b>Pedir a Domicilio</b></button></li>
-                    </ul>
-            </div>
-
-                </div>
-            </div>
-
-            <div class="slide" pos="3">
-                <div class="slide-3">
-                    <img src="./imgs/imgplato3.jpg" class="imagenescarrousel">
-                    <h1 class="titscarrousel">Fettuccine Primavera</h1>
-                    <p>
-                        Tallarines al dente servidos con una variedad de salsas, desde pesto hasta boloñesa.
-                        <br><br>
-                        Ingredientes: Tallarines (pasta), salsa de elección (por ejemplo, salsa de tomate, pesto, alfredo), ingredientes complementarios (como carne, verduras, queso), sal y aceite.
-                    </p>
-
-                    <br>
-
-            <div class="botonescarta">
-                    <ul class="shadow-button-set">
-                        <li><button><b>Añadir para reserva</b></button></li>
-                    </ul>
-
-                    <br>
-
-                    <ul class="shadow-button-set">
-                        <li><button><b>Pedir a Domicilio</b></button></li>
-                    </ul>
-            </div>
-                </div>
-            </div>
-        </div>
-        <div class="slide-toggle-container">
-            <svg class="slide-toggle" direction="prev" height="50" width="50">
-                <polyline class="chevron" points="0,50 25,38 50,50" />
-                Sorry, your browser does not support inline SVG.
-            </svg>
-            <svg class="slide-toggle" direction="next" height="50" width="50">
-                <polyline class="chevron" points="0,0 25,12 50,0" />
-                Sorry, your browser does not support inline SVG.
-            </svg>
-        </div>
-
-        <div class="index">
-            <p>1/3</p>
-        </div>
-    </div>
-
-
-    <script>
-        document.getElementById('active').addEventListener('change', function () {
-            var elementsToToggle = document.querySelectorAll('.container');
-
-            elementsToToggle.forEach(function (element) {
-                setTimeout(function () {
-                    element.classList.toggle('hidden');
-                }, 250);
-            });
-        });
-    </script>
-
-
-
-    <script>
-        $(document).ready(function () {
-            // slide to start. should always be 1 as it's also the lower bound to the number of slides. corresponds to [pos] attribute on html element
-            let active_slide = 1;
-
-            // last slide. should be the upper bound to the number of slides. corresponds to [pos] attribute on html element
-            let slide_count = 3;
-
-            // speed of animations (ms)
-            let speed = 100;
-
-
-            // hide all slides that aren't starting active slide
-            $(".slide[pos!='" + active_slide + "']").each(function () {
-                $(this).hide();
-            })
-
-
-            $(".slide-toggle[direction='next']").click(function () {
-
-
-                let next_slide = active_slide + 1;
-
-                Next(active_slide, next_slide, slide_count, speed);
-
-                // once animations are done, set new active slide
-                if (next_slide <= slide_count) {
-                    active_slide = next_slide;
-                } else {
-                    active_slide = 1;
-                }
-
-
-            })
-
-
-            $(".slide-toggle[direction='prev']").click(function () {
-
-
-                let next_slide = active_slide - 1;
-
-                Prev(active_slide, next_slide, slide_count, speed);
-
-                // once animations are done, set new active slide
-                if (next_slide < 1) {
-                    active_slide = slide_count;
-                } else {
-                    active_slide = next_slide;
-                }
-
-
-            })
-            function Next(active_slide, next_slide, slide_count, speed) {
-
-                // non active slides moved down so they can slide up when activated
-                $(".slide[pos!='" + active_slide + "']").each(function () {
-                    $(this).css("top", "10px");
-                })
-
-
-                if (next_slide <= slide_count) {
-
-
-                    /*
-                    Note: delay only works if .hide() or .show() are in its internal queue. Therefore you need to pass an argument to it, even if it's 0. (praise be to stackoverflow)
-                    */
-
-                    $(".slide[pos='" + active_slide + "']").animate({ opacity: 0, top: "-10px" }, { duration: speed }).hide(0).animate({ top: "10px" });
-
-                    $(".slide[pos='" + next_slide + "']").delay(speed).show(0).animate({ opacity: 1, top: "0px" }, { duration: speed });
-
-                    $(".index > p").text(next_slide + "/" + slide_count);
-
-
-                } else {
-
-                    next_slide = 1;
-
-                    $(".slide[pos='" + active_slide + "']").animate({ opacity: 0, top: "-10px" }, { duration: speed }).hide(0).animate({ top: "10px" });
-
-                    $(".slide[pos='" + next_slide + "']").delay(speed).show(0).animate({ opacity: 1, top: "0px" });
-
-                    $(".index > p").text(next_slide + "/" + slide_count);
-
-                }
-
-            }
-
-            function Prev(active_slide, next_slide, slide_count, speed) {
-
-                // non active slides moved up so they can slide down when activated
-                $(".slide[pos!='" + active_slide + "']").each(function () {
-                    $(this).css("top", "-10px");
-                })
-
-
-                if (next_slide < 1) {
-
-                    next_slide = slide_count;
-
-                    $(".slide[pos='" + active_slide + "']").animate({ opacity: 0, top: "10px" }, { duration: speed }).hide(0).animate({ top: "10px" });
-
-                    $(".slide[pos='" + next_slide + "']").delay(speed).show(0).animate({ opacity: 1, top: "0px" }, { duration: speed });
-
-                    $(".index > p").text(next_slide + "/" + slide_count);
-
-
-                } else {
-
-
-                    $(".slide[pos='" + active_slide + "']").animate({ opacity: 0, top: "10px" }, { duration: speed }).hide(0).animate({ top: "10px" });
-
-                    $(".slide[pos='" + next_slide + "']").delay(speed).show(0).animate({ opacity: 1, top: "0px" });
-
-                    $(".index > p").text(next_slide + "/" + slide_count);
-
-
-                }
-
-            }
-        });
-    </script>
+    
 </body>
 
 </html>

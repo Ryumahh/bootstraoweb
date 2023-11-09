@@ -6,10 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Restaurante Genérico</title>
 
-    <link rel="stylesheet" href="/estilos/estilo.css">
-    <link rel="icon" href="/imgs/Logo.ico" type="image/x-icon">
+    <link rel="stylesheet" href="./estilos/estilo.css">
+    <link rel="icon" href="./imgs/Logo.ico" type="image/x-icon">
 
-    <script language="JavaScript" src="/js.js"></script>
+    <script language="JavaScript" src="./js.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -20,15 +20,15 @@
 
 <body>
     <nav>
-        <a href="/index.html" class="nav">Inicio<img src="/imgs/Inicio.svg" class="img1"></a>
-        <a href="/cartacompleta.html" class="nav">Carta Completa<img src="/imgs/Expandir.svg" class="img4"></a>
-        <a href="/ofertas.html" class="nav">Ofertas<img src="/imgs/Ofertas.svg" class="img2"></a>
-        <a href="/contacto.html" class="nav">Contacto<img src="/imgs/Contacto.svg" class="img3"></a>
-        <a href="/register.html" class="nav">Cuenta<img src="/imgs/usuarioicon.svg" class="img5"></a>
+        <a href="./index.html" class="nav">Inicio<img src="./imgs/Inicio.svg" class="img1"></a>
+        <a href="./cartacompleta.html" class="nav">Carta Completa<img src="./imgs/Expandir.svg" class="img4"></a>
+        <a href="./ofertas.html" class="nav">Ofertas<img src="./imgs/Ofertas.svg" class="img2"></a>
+        <a href="./contacto.html" class="nav">Contacto<img src="./imgs/Contacto.svg" class="img3"></a>
+        <a href="./register.html" class="nav">Cuenta<img src="./imgs/usuarioicon.svg" class="img5"></a>
     </nav>
 
     <h1 class="maintit">
-        <a href="/index.html">Restaurante Genérico</a>
+        <a href="./index.html">Restaurante Genérico</a>
     </h1>
 
 
@@ -56,14 +56,14 @@
 
 
     <audio class="audio" id="miAudio">
-        <source src="/musicafondo.mp3" type="audio/mpeg">
+        <source src="./musicafondo.mp3" type="audio/mpeg">
         Tu navegador no soporta la reproducción de audio.
       </audio>
-      
+
       <script>
         // Obtén una referencia al elemento de audio
         var miAudio = document.getElementById("miAudio");
-      
+
         // Intenta reproducir el audio inmediatamente después de cargarlo
         miAudio.play()
         .catch(function(error) {
@@ -71,8 +71,8 @@
           console.error("La reproducción automática no está permitida por el navegador.");
         });
       </script>
-      
-    
+
+
     <!-- ---------- Menu Desplegable ---------- -->
     <input type="checkbox" id="active">
     <label for="active" class="menu-btn"><span></span></label>
@@ -82,7 +82,7 @@
         <h2>Más Información</h2>
         <ul>
             <li><a href="#">Alérgenos</a></li>
-            <li><a href="/instalaciones.html">Instalaciones</a></li>
+            <li><a href="./instalaciones.html">Instalaciones</a></li>
             <li><a href="#">Correspondencias</a></li>
             <li><a href="#">Reconocimientos</a></li>
         </ul>
@@ -93,7 +93,7 @@
         <div class="slide-container">
             <div class="slide" pos="1">
                 <div class="slide-1">
-                    <img src="/imgs/imgplato1.jpg" class="imagenescarrousel">
+                    <img src="./imgs/imgplato1.jpg" class="imagenescarrousel">
                     <h1 class="titscarrousel">Filete Dorado del Mar</h1>
                     <p>
                         Pescado frito crujiente y dorado por fuera, tierno y jugoso por dentro.
@@ -120,7 +120,7 @@
             <div class="slide" pos="2">
                 <div class="slide-2">
 
-                    <img src="/imgs/imgplato2.jpg" class="imagenescarrousel">
+                    <img src="./imgs/imgplato2.jpg" class="imagenescarrousel">
                     <h1 class="titscarrousel">Torta Real de Zanahoria</h1>
                     <p>
                         Pastel esponjoso y húmedo con un sabor dulce y agradable a zanahoria, cubierto con glaseado de queso crema.
@@ -141,13 +141,13 @@
                         <li><button><b>Pedir a Domicilio</b></button></li>
                     </ul>
             </div>
-                    
+
                 </div>
             </div>
 
             <div class="slide" pos="3">
                 <div class="slide-3">
-                    <img src="/imgs/imgplato3.jpg" class="imagenescarrousel">
+                    <img src="./imgs/imgplato3.jpg" class="imagenescarrousel">
                     <h1 class="titscarrousel">Fettuccine Primavera</h1>
                     <p>
                         Tallarines al dente servidos con una variedad de salsas, desde pesto hasta boloñesa.
@@ -195,7 +195,7 @@
             elementsToToggle.forEach(function (element) {
                 setTimeout(function () {
                     element.classList.toggle('hidden');
-                }, 250);  
+                }, 250);
             });
         });
     </script>
@@ -265,7 +265,7 @@
                 if (next_slide <= slide_count) {
 
 
-                    /*   
+                    /*
                     Note: delay only works if .hide() or .show() are in its internal queue. Therefore you need to pass an argument to it, even if it's 0. (praise be to stackoverflow)
                     */
 

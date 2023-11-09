@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurante Genérico</title>
+
+    <link rel="stylesheet" href="/estilos/estilo.css">
+    <link rel="icon" href="/imgs/Logo.ico" type="image/x-icon">
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Diphylleia&family=Kalam&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+    <nav>
+        <a href="/index.html" class="nav">Inicio<img src="/imgs/Inicio.svg" class="img1"></a>
+        <a href="/cartacompleta.html" class="nav">Carta Completa<img src="/imgs/Expandir.svg" class="img4"></a>
+        <a href="/ofertas.html" class="nav">Ofertas<img src="/imgs/Ofertas.svg" class="img2"></a>
+        <a href="/contacto.html" class="nav">Contacto<img src="/imgs/Contacto.svg" class="img3"></a>
+        <a href="/register.html" class="nav">Cuenta<img src="/imgs/usuarioicon.svg" class="img5"></a>
+    </nav>
+
+
+
+    <h1 class="maintit">
+        <a href="/index.html">Restaurante Genérico</a>
+    </h1>
+
+
+
+    <!-- ---------- Barra Búsqueda ---------- -->
+    <div class="input-container">
+        <input type="text" name="text" class="input" placeholder="Buscar un plato...">
+        <span class="icon">
+            <svg width="19px" height="19px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                <g id="SVGRepo_iconCarrier">
+                    <path opacity="1" d="M14 5H20" stroke="#000" stroke-width="1.5" stroke-linecap="round"
+                        stroke-linejoin="round"></path>
+                    <path opacity="1" d="M14 8H17" stroke="#000" stroke-width="1.5" stroke-linecap="round"
+                        stroke-linejoin="round"></path>
+                    <path d="M21 11.5C21 16.75 16.75 21 11.5 21C6.25 21 2 16.75 2 11.5C2 6.25 6.25 2 11.5 2"
+                        stroke="#000" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                    <path opacity="1" d="M22 22L20 20" stroke="#000" stroke-width="3.5" stroke-linecap="round"
+                        stroke-linejoin="round"></path>
+                </g>
+            </svg>
+        </span>
+    </div>
+
+
+    <!-- ---------- Menu Desplegable ---------- -->
+    <input type="checkbox" id="active">
+    <label for="active" class="menu-btn"><span></span></label>
+    <label for="active" class="close"></label>
+
+    <div class="wrapper">
+        <h2>Más Información</h2>
+        <ul>
+            <li><a href="#">Alérgenos</a></li>
+            <li><a href="/instalaciones.html">Instalaciones</a></li>
+            <li><a href="#">Correspondencias</a></li>
+            <li><a href="#">Reconocimientos</a></li>
+        </ul>
+    </div>
+
+    <!-- ---------- Contenido de la página ---------- -->
+    <h1 class="titulo">Sobre Nosotros</h1>
+
+    <div class="sobrenosotros">
+        <p>
+            ¡Bienvenidos a nuestro restaurante, un santuario culinario donde los sabores se entrelazan para crear una
+            experiencia única! En nuestro establecimiento, nos enorgullecemos de ofrecer a nuestros comensales un viaje
+            gastronómico que despierta los sentidos y deleita el paladar.
+            Nuestro restaurante es más que un lugar para comer; es un espacio diseñado para celebrar la pasión por la
+            buena comida y la hospitalidad.
+            Desde el momento en que cruza nuestras puertas, será recibido por un ambiente acogedor y elegante, donde la
+            luz tenue y la música ambiental crean un ambiente relajado y placentero.
+        </p>
+
+        <p>
+            Nuestra carta es un reflejo de nuestra dedicación a la excelencia culinaria.
+            Cada plato está cuidadosamente elaborado por nuestros talentosos chefs, quienes seleccionan los ingredientes
+            más frescos y de la más alta calidad para ofrecerle sabores auténticos y exquisitos. Ya sea que prefiera
+            clásicos reconfortantes o aventurarse con sabores innovadores, tenemos algo para todos los gustos.
+        </p>
+
+        <p>
+            Nuestro equipo de servicio está aquí para garantizar que su experiencia sea excepcional en cada visita.
+            Desde el conocimiento detallado de nuestro menú hasta la atención personalizada, estamos comprometidos a
+            brindarle un servicio impecable que lo haga sentirse especial y atendido.
+            En nuestro restaurante, valoramos la satisfacción de nuestros clientes y nos esforzamos por superar sus
+            expectativas en cada comida. Esperamos que disfrute de esta experiencia culinaria y que regrese para
+            deleitarse con nuestros deliciosos platillos en futuras ocasiones. ¡Gracias por elegirnos y permitirnos ser
+            parte de sus momentos gastronómicos memorables!
+        </p>
+    </div>
+
+    <img src="/imgs/ImagenMuestra.jpg" class="muestra">
+
+    <!-- Botón Opinión -->
+    <ul class="shadow-button-set">
+        <li><button onclick="redPago()"><b>Opinión de los Consumidores</b>
+        </button></li>
+    </ul>
+
+    <script>
+        document.getElementById('active').addEventListener('change', function () {
+            var elementsToToggle = document.querySelectorAll('.muestra, .shadow-button-set, .shadow-button-set li');
+
+            elementsToToggle.forEach(function (element) {
+                setTimeout(function () {
+                    element.classList.toggle('hidden');
+                }, 210);  
+            });
+        });
+    </script>
+
+    <script>
+         function redPago() {
+        // Cambia la URL a la que quieres redirigir
+        window.location.href = 'pago.html';
+    }
+    </script>
+
+
+    <footer>
+        <p xmlns:cc="http://creativecommons.org/ns#" xmlns:dct="http://purl.org/dc/terms/"><span property="dct:title">Restaurante Genérico</span> by <a rel="cc:attributionURL dct:creator" property="cc:attributionName" href="https://www.linkedin.com/in/josephgar/">José Domingo Carrillo García</a> is licensed under <a href="http://creativecommons.org/licenses/by-nc-nd/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block;">CC BY-NC-ND 4.0<img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1"><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1"><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/nc.svg?ref=chooser-v1"><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/nd.svg?ref=chooser-v1"></a></p>
+    </footer>
+
+</body>
+
+</html>

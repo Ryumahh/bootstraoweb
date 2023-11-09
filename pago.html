@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurante Genérico</title>
+
+    <link rel="stylesheet" href="/estilos/estilo.css">
+    <link rel="icon" href="/imgs/Logo.ico" type="image/x-icon">
+    
+
+    <script language="JavaScript" src="/js.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Diphylleia&family=Kalam&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+    <nav>
+        <a href="/index.html" class="nav">Inicio<img src="/imgs/Inicio.svg" class="img1"></a>
+        <a href="/cartacompleta.html" class="nav">Carta Completa<img src="/imgs/Expandir.svg" class="img4"></a>
+        <a href="/ofertas.html" class="nav">Ofertas<img src="/imgs/Ofertas.svg" class="img2"></a>
+        <a href="/contacto.html" class="nav">Contacto<img src="/imgs/Contacto.svg" class="img3"></a>
+        <a href="/register.html" class="nav">Cuenta<img src="/imgs/usuarioicon.svg" class="img5"></a>
+    </nav>
+
+    <h1 class="maintit">
+        <a href="/index.html">Restaurante Genérico</a>
+    </h1>
+
+
+
+    <!-- ---------- Barra Búsqueda ---------- -->
+    <div class="input-container">
+        <input type="text" name="text" class="input" placeholder="Buscar un plato...">
+        <span class="icon">
+            <svg width="19px" height="19px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                <g id="SVGRepo_iconCarrier">
+                    <path opacity="1" d="M14 5H20" stroke="#000" stroke-width="1.5" stroke-linecap="round"
+                        stroke-linejoin="round"></path>
+                    <path opacity="1" d="M14 8H17" stroke="#000" stroke-width="1.5" stroke-linecap="round"
+                        stroke-linejoin="round"></path>
+                    <path d="M21 11.5C21 16.75 16.75 21 11.5 21C6.25 21 2 16.75 2 11.5C2 6.25 6.25 2 11.5 2"
+                        stroke="#000" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                    <path opacity="1" d="M22 22L20 20" stroke="#000" stroke-width="3.5" stroke-linecap="round"
+                        stroke-linejoin="round"></path>
+                </g>
+            </svg>
+        </span>
+    </div>
+
+
+    <!-- ---------- Menu Desplegable ---------- -->
+    <input type="checkbox" id="active">
+    <label for="active" class="menu-btn"><span></span></label>
+    <label for="active" class="close"></label>
+
+    <div class="wrapper">
+        <h2>Más Información</h2>
+        <ul>
+            <li><a href="#">Alérgenos</a></li>
+            <li><a href="/instalaciones.html">Instalaciones</a></li>
+            <li><a href="#">Correspondencias</a></li>
+            <li><a href="#">Reconocimientos</a></li>
+        </ul>
+    </div>
+
+
+    <h1 class="titplatadd">Platos Añadidos</h1>
+
+
+    <!-- ------------- Método Pago ------------ -->
+    <h1 class="titpago">Método de Pago</h1>
+
+    <script>
+        // Función para manejar el evento de desplazamiento de la rueda del mouse
+        function preventScroll(event) {
+            event.preventDefault();
+        }
+        
+        // Función para manejar el evento de desplazamiento táctil
+        function preventTouchScroll(event) {
+            if (event.touches.length > 0) {
+                event.preventDefault();
+            }
+        }
+        
+        // Agregar oyentes de eventos para el desplazamiento de la rueda del mouse y el desplazamiento táctil
+        window.addEventListener("wheel", preventScroll, { passive: false });
+        window.addEventListener("touchmove", preventTouchScroll, { passive: false });
+        
+        // Ocultar la barra de desplazamiento
+        document.documentElement.style.overflow = 'hidden';
+    </script>
+
+<div class="metodopagofull">
+    <div class="select-box">
+        <div class="select-box__current" tabindex="1">
+          <!-- Iterate through the options -->
+          <!-- For each option, create an input and a paragraph element -->
+          <div class="select-box__value">
+            <input class="select-box__input" type="radio" id="0" value="1" name="Ben" checked="true">
+            <p class="select-box__input-text">VISA</p>
+          </div>
+          <div class="select-box__value">
+            <input class="select-box__input" type="radio" id="1" value="2" name="Ben">
+            <p class="select-box__input-text">Mastercard</p>
+          </div>
+          <div class="select-box__value">
+            <input class="select-box__input" type="radio" id="2" value="3" name="Ben">
+            <p class="select-box__input-text">American Express</p>
+          </div>
+          <div class="select-box__value">
+            <input class="select-box__input" type="radio" id="3" value="4" name="Ben">
+            <p class="select-box__input-text">Google Pay</p>
+          </div>
+          <div class="select-box__value">
+            <input class="select-box__input" type="radio" id="4" value="5" name="Ben">
+            <p class="select-box__input-text">Paypal</p>
+          </div>
+          <img class="select-box__icon" src="http://cdn.onlinewebfonts.com/svg/img_295694.svg" alt="Arrow Icon" aria-hidden="true">
+        </div>
+        <ul class="select-box__list">
+          <!-- Iterate through the options again to create list items -->
+          <li>
+            <label class="select-box__option" for="0" aria-hidden>VISA</label>
+          </li>
+          <li>
+            <label class="select-box__option" for="1" aria-hidden>Mastercard</label>
+          </li>
+          <li>
+            <label class="select-box__option" for="2" aria-hidden>American Express</label>
+          </li>
+          <li>
+            <label class="select-box__option" for="3" aria-hidden>Google Pay</label>
+          </li>
+          <li>
+            <label class="select-box__option" for="4" aria-hidden>Paypal</label>
+          </li>
+        </ul>
+      </div>
+      
+      <input type="number" class="datostarjeta1" placeholder="Número de la Tarjeta">
+      <input type="text" class="datostarjeta2" placeholder="Fecha de Caducidad">
+      <input type="text" class="datostarjeta3" placeholder="Titular de la tarjeta">
+      <input type="number" class="datostarjeta4" placeholder="CVV">
+</div>
+      <script>
+        // Obtén los elementos de entrada que deseas ocultar/mostrar
+        const input1 = document.querySelector(".datostarjeta1");
+        const input2 = document.querySelector(".datostarjeta2");
+        const input3 = document.querySelector(".datostarjeta3");
+        const selectBox = document.querySelector(".select-box");
+        
+        // Variable para rastrear si los inputs están visibles
+        let inputsVisible = true;
+        
+        // Agrega un controlador de eventos al select-box para alternar la visibilidad de los inputs
+        selectBox.addEventListener("click", function() {
+            if (inputsVisible) {
+                input1.style.display = "none";
+                input2.style.display = "none";
+                input3.style.display = "none";
+            } else {
+                input1.style.display = "block";
+                input2.style.display = "block";
+                input3.style.display = "block";
+            }
+            
+            // Cambia el estado de visibilidad
+            inputsVisible = !inputsVisible;
+        });
+        
+        // Agrega un controlador de eventos al select-box para detectar el final de la animación
+        selectBox.addEventListener("transitionend", function() {
+            if (inputsVisible) {
+                input1.style.display = "block";
+                input2.style.display = "block";
+                input3.style.display = "block";
+            }
+        });
+        </script>
+
+    <img src="/imgs/linea.png" class="imgsep">
+
+    
+    <ul class="shadow-button-set2">
+        <li><button id="realizarPedidoButton"><b>Realizar Pedido</b></button></li>
+    </ul>
+    <script>
+        document.getElementById("realizarPedidoButton").addEventListener("click", () => {
+            // Al hacer clic en el botón, establece un valor en localStorage
+            localStorage.setItem("abrirModal", "true");
+            // Luego, abre modal.html en una nueva ventana o pestaña
+            window.open("modal.html", "_blank");
+        });
+    </script>
+    
+
+    <!-- ---------- Carrousel ---------- -->
+    <div class="container2">
+        <div class="slide-container">
+            <div class="slide" pos="1">
+                <div class="slide-1">
+                    <img src="/imgs/imgplato1.jpg" class="imagenescarrousel">
+                    <h1 class="titscarrousel">Filete Dorado del Mar</h1>
+                    <p>
+                        Pescado frito crujiente y dorado por fuera, tierno y jugoso por dentro.
+                        <br><br>
+                        Ingredientes: Pescado, harina, huevo, pan rallado, sal, pimienta, aceite para freír.
+                    </p>
+
+                    <br>
+
+            <div class="botonescarta">
+                    <ul class="shadow-button-set">
+                        <li><button><b>Añadir para reserva</b></button></li>
+                    </ul>
+
+                    <br>
+
+                    <ul class="shadow-button-set">
+                        <li><button><b>Pedir a Domicilio</b></button></li>
+                    </ul>
+            </div>
+                </div>
+            </div>
+
+            <div class="slide" pos="2">
+                <div class="slide-2">
+
+                    <img src="/imgs/imgplato2.jpg" class="imagenescarrousel">
+                    <h1 class="titscarrousel">Torta Real de Zanahoria</h1>
+                    <p>
+                        Pastel esponjoso y húmedo con un sabor dulce y agradable a zanahoria, cubierto con glaseado de queso crema.
+                        <br><br>
+                        Ingredientes: Zanahorias, harina, azúcar, huevos, aceite vegetal, canela, nueces (opcional), bicarbonato de sodio, polvo de hornear, sal, queso crema, mantequilla, azúcar glas.
+                    </p>
+
+                    <br>
+
+            <div class="botonescarta">
+                    <ul class="shadow-button-set">
+                        <li><button><b>Añadir para reserva</b></button></li>
+                    </ul>
+
+                    <br>
+
+                    <ul class="shadow-button-set">
+                        <li><button><b>Pedir a Domicilio</b></button></li>
+                    </ul>
+            </div>
+                    
+                </div>
+            </div>
+
+            <div class="slide" pos="3">
+                <div class="slide-3">
+                    <img src="/imgs/imgplato3.jpg" class="imagenescarrousel">
+                    <h1 class="titscarrousel">Fettuccine Primavera</h1>
+                    <p>
+                        Tallarines al dente servidos con una variedad de salsas, desde pesto hasta boloñesa.
+                        <br><br>
+                        Ingredientes: Tallarines (pasta), salsa de elección (por ejemplo, salsa de tomate, pesto, alfredo), ingredientes complementarios (como carne, verduras, queso), sal y aceite.
+                    </p>
+
+                    <br>
+
+            <div class="botonescarta">
+                    <ul class="shadow-button-set">
+                        <li><button><b>Añadir para reserva</b></button></li>
+                    </ul>
+
+                    <br>
+
+                    <ul class="shadow-button-set">
+                        <li><button><b>Pedir a Domicilio</b></button></li>
+                    </ul>
+            </div>
+                </div>
+            </div>
+        </div>
+        <div class="slide-toggle-container">
+            <svg class="slide-toggle" direction="prev" height="50" width="50">
+                <polyline class="chevron" points="0,50 25,38 50,50" />
+                Sorry, your browser does not support inline SVG.
+            </svg>
+            <svg class="slide-toggle" direction="next" height="50" width="50">
+                <polyline class="chevron" points="0,0 25,12 50,0" />
+                Sorry, your browser does not support inline SVG.
+            </svg>
+        </div>
+
+        <div class="index2">
+            <p>1/3</p>
+        </div>
+    </div>
+
+    
+
+    
+
+    <script>
+        document.getElementById('active').addEventListener('change', function () {
+            var elementsToToggle = document.querySelectorAll('.container2, .metodopagofull, .imgsep, .shadow-button-set2');
+
+            elementsToToggle.forEach(function (element) {
+                setTimeout(function () {
+                    element.classList.toggle('hidden');
+                }, 300);  
+            });
+        });
+    </script>
+
+
+
+    <script>
+        $(document).ready(function () {
+            // slide to start. should always be 1 as it's also the lower bound to the number of slides. corresponds to [pos] attribute on html element
+            let active_slide = 1;
+
+            // last slide. should be the upper bound to the number of slides. corresponds to [pos] attribute on html element
+            let slide_count = 3;
+
+            // speed of animations (ms)
+            let speed = 100;
+
+
+            // hide all slides that aren't starting active slide
+            $(".slide[pos!='" + active_slide + "']").each(function () {
+                $(this).hide();
+            })
+
+
+            $(".slide-toggle[direction='next']").click(function () {
+
+
+                let next_slide = active_slide + 1;
+
+                Next(active_slide, next_slide, slide_count, speed);
+
+                // once animations are done, set new active slide
+                if (next_slide <= slide_count) {
+                    active_slide = next_slide;
+                } else {
+                    active_slide = 1;
+                }
+
+
+            })
+
+
+            $(".slide-toggle[direction='prev']").click(function () {
+
+
+                let next_slide = active_slide - 1;
+
+                Prev(active_slide, next_slide, slide_count, speed);
+
+                // once animations are done, set new active slide
+                if (next_slide < 1) {
+                    active_slide = slide_count;
+                } else {
+                    active_slide = next_slide;
+                }
+
+
+            })
+            function Next(active_slide, next_slide, slide_count, speed) {
+
+                // non active slides moved down so they can slide up when activated
+                $(".slide[pos!='" + active_slide + "']").each(function () {
+                    $(this).css("top", "10px");
+                })
+
+
+                if (next_slide <= slide_count) {
+
+
+                    /*   
+                    Note: delay only works if .hide() or .show() are in its internal queue. Therefore you need to pass an argument to it, even if it's 0. (praise be to stackoverflow)
+                    */
+
+                    $(".slide[pos='" + active_slide + "']").animate({ opacity: 0, top: "-10px" }, { duration: speed }).hide(0).animate({ top: "10px" });
+
+                    $(".slide[pos='" + next_slide + "']").delay(speed).show(0).animate({ opacity: 1, top: "0px" }, { duration: speed });
+
+                    $(".index2 > p").text(next_slide + "/" + slide_count);
+
+
+                } else {
+
+                    next_slide = 1;
+
+                    $(".slide[pos='" + active_slide + "']").animate({ opacity: 0, top: "-10px" }, { duration: speed }).hide(0).animate({ top: "10px" });
+
+                    $(".slide[pos='" + next_slide + "']").delay(speed).show(0).animate({ opacity: 1, top: "0px" });
+
+                    $(".index2 > p").text(next_slide + "/" + slide_count);
+
+                }
+
+            }
+
+            function Prev(active_slide, next_slide, slide_count, speed) {
+
+                // non active slides moved up so they can slide down when activated
+                $(".slide[pos!='" + active_slide + "']").each(function () {
+                    $(this).css("top", "-10px");
+                })
+
+
+                if (next_slide < 1) {
+
+                    next_slide = slide_count;
+
+                    $(".slide[pos='" + active_slide + "']").animate({ opacity: 0, top: "10px" }, { duration: speed }).hide(0).animate({ top: "10px" });
+
+                    $(".slide[pos='" + next_slide + "']").delay(speed).show(0).animate({ opacity: 1, top: "0px" }, { duration: speed });
+
+                    $(".index2 > p").text(next_slide + "/" + slide_count);
+
+
+                } else {
+
+
+                    $(".slide[pos='" + active_slide + "']").animate({ opacity: 0, top: "10px" }, { duration: speed }).hide(0).animate({ top: "10px" });
+
+                    $(".slide[pos='" + next_slide + "']").delay(speed).show(0).animate({ opacity: 1, top: "0px" });
+
+                    $(".index2 > p").text(next_slide + "/" + slide_count);
+
+
+                }
+
+            }
+        });
+    </script>
+</body>
+
+</html>
